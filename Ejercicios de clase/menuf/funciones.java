@@ -4,7 +4,7 @@ public class funciones{
     int contador=1;
     int elegido=0;
     for(int i=0;i<4;i++){
-      System.out.println(contador + x[i]);
+      System.out.println(contador +" "+ x[i]);
       contador++;
     }
     System.out.println("Elige una de las opciones: ");
@@ -25,7 +25,31 @@ public class funciones{
       default:
       System.out.println("Valor invalido");
     }
-    return opcion;
+    return elegido;
+  }
+  public static int suma(int n, int m){
+    /*
+     * Suma los dos enteros elegidos.
+     * 
+     */
+    int resultado = n+m;
+    return resultado;
+  }
+  public static int resta(int n, int m){
+    /*
+     * Resta los dos enteros elegidos.
+     * 
+     */
+    int resultado = n-m;
+    return resultado;
+  }
+  public static int multiplicacion(int n, int m){
+    /*
+     * Multiplica los dos enteros elegidos.
+     * 
+     */
+    int resultado = n*m;
+    return resultado;
   }
 }
 

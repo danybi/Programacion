@@ -28,22 +28,47 @@ public class FuncionesMatematicas{
     while (!esPrimo(++x)){};
     return x;
   }
-  public static double Potencia(int base, int exponente){
+  public static int potencia(int base, int exponente){
     if(exponente==0){
       return 1;
     }
-    
-    if(exponente<0){
-      return 1/potencia(base, -exponente);
+    if(exponente < 0){
+      return 1/potencia(base,exponente);
     }
     int n=1;
-    for(int i=0;i < Math.abs(exponente);i++){
+    for(int i=0;i<Math.abs(exponente);i++){
       n=n*base;
     }
     return n;
   }
-  public static int Digitos{
     
+  public static int digitos(long x){
+    if(x<0){
+      x=-x;
+    }else{
+      int n=0;
+      while(x>0){
+        x=x/10;
+        n++;
+      }
+    }
+  }
+  public static int digitos(int x){
+    return digitos((long)x);
+  }
+  public static int voltea(long x){
+    if(voltea<0){
+      return -voltea(-x);
+    }
+    long volteado=0;
+    while(x>0){
+      volteado=(volteado*10)+(x%10);
+      x=x/10;
+    }
+    return volteado;
+  }
+  public static int voltea(int x){
+    return (int)voltea((long)x);
+  }
   
-    
 }
